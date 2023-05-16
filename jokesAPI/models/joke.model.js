@@ -1,15 +1,15 @@
 const mongoose = require('mongoose');
 
 const JokesSchema = new mongoose.Schema({
-    jokeText: {
+    setup: {
         type: String,
-        required: [true],
+        required: true,
     },
-    category: {
+    punchline: {
         type: String,
-        required: [true],
+        required: true
     }
-});
+}, { timestamps: true });
 
 const Joke = mongoose.model('Joke', JokesSchema);
 

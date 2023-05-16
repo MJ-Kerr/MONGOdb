@@ -14,7 +14,7 @@ console.log(PORT)
 require("./config/config")
 
 // routes to run
-// const allMyJokeRoutes = require("./routes/joke.routes")
-// allMyJokeRoutes(app);
+const allMyProductRoutes = require("./routes/product.routes")
+allMyProductRoutes(app);
 
 app.listen(PORT, () => console.log(` 🎈🎈🎈 Server up on port ${PORT} 🎈🎈🎈`))

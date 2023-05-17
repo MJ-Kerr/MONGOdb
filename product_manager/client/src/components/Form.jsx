@@ -19,7 +19,7 @@ const Form = () => {
         // Send a POST request to the API to add the product
         axios.post('http://localhost:8000/api/products', newProduct)
             .then(res => {
-                console.log(res.data); // Optional: Log the response
+                console.log(res.data);
                 // Clear the form fields
                 setTitle('');
                 setDescription('');

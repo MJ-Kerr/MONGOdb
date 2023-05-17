@@ -26,7 +26,20 @@ const DisplayAll = (props) => {
                 {authors.map((author) => {
                     console.log(author);
                     return <div key={author._id}>
-                        <Link to={`/${author._id}`}>{author.author}</Link>
+                        <table style={{ backgroundColor: "blanchedAlmond", color: "black", border: "solid", borderColor: "red" }}>
+                            <tr>
+                                <th>Author ✍️</th>
+                                <th>Actions Available 🎬</th>
+                            </tr>
+                            <tr>
+                                <td style={{ border: "solid" }}>{author.author}</td>
+                                <td style={{ border: "solid" }}>
+                                    <Link to={`/delete/${author._id}`}>Delete</Link>
+                                    |
+                                    <Link to={`/update/${author._id}`}>Update</Link>
+                                </td>
+                            </tr>
+                        </table>
                     </div>;
                 })}
             </div>

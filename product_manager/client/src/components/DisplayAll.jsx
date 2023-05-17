@@ -16,11 +16,12 @@ const DisplayAll = (props) => {
             });
     }, []);
 
-    console.log('Products:', products);
+    // console.log('Products:', products);
 
     return (
         <fieldset>
             {/* {JSON.stringify(products)} */}
+
             <div>
                 {products.map((product) => {
                     console.log(product);
@@ -34,3 +35,4 @@ const DisplayAll = (props) => {
 };
 
 export default DisplayAll;
+

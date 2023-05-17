@@ -10,7 +10,9 @@ function App() {
       {/*Theatre Stage */}
       <Routes>
         {/* Main Route */}
+        <Route path='/form' element={<Form />} />
         <Route path='/' element={<DisplayAll />} />
+
 
       </Routes>
     </fieldset>

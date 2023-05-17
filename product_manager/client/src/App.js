@@ -1,18 +1,18 @@
 import './App.css';
+import { Routes, Route, Link } from 'react-router-dom'
+import DisplayAll from './components/DisplayAll';
+import Form from './components/Form'
 
 function App() {
   return (
-    <fieldset class='container'>
+    <fieldset className='container'>
       <h1>Product Manager:</h1>
-      <form action="submit">
-        <label>Product:</label>
-        <input type="text" />
-        <label>Description:</label>
-        <input type="textArea" />
-        <label>Price:</label>
-        <input type="number" />
-        <button>Create Product</button>
-      </form>
+      {/*Theatre Stage */}
+      <Routes>
+        {/* Main Route */}
+        <Route path='/' element={<DisplayAll />} />
+
+      </Routes>
     </fieldset>
   );
 }

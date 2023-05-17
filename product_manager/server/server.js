@@ -1,20 +1,20 @@
 const express = require("express");
+const cors = require('cors');
 const app = express();
 
 //middleware
-app.use(express.json(), express.urlencoded({ extended: true }));
+app.use(cors(), express.json(), express.urlencoded({ extended: true }));
 
 // load .env variables
 console.log('Loading environment variables...🕐🕑🕒🕓');
 require('dotenv').config();
 const PORT = process.env.PORT
-console.log(PORT)
+// console.log(PORT)
 
-// import the file to run the server
+// connects to the DB
 require("./config/config")
 
-// routes to run
-const allMyProductRoutes = require("./routes/product.routes")
-allMyProductRoutes(app);
+// routes 
+require("./routes/product.routes")(app);
 
 app.listen(PORT, () => console.log(` 🎈🎈🎈 Server up on port ${PORT} 🎈🎈🎈`))

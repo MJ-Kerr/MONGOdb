@@ -21,7 +21,7 @@ const Form = () => {
                 console.log(res.data);
                 // Clear the form fields
                 setAuthors('');
-                navigate('/'); // Navigate to the desired page
+                navigate('/');
             })
             .catch(err => {
                 const errorResponse = err.response.data.errors;
